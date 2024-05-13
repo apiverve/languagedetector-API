@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/languagedetector",
+  "version": "1.0.0",
+  "description": "Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/languagedetector-API.git"
+  },
+  "keywords": [
+    "language detector"," language detection"," language detector api"," language detection api"," language detector tool"," language detection tool"," language detector software"," language detection software"," language detector service"," language detection service"," language detector library"," language detection library"," language detector sdk"," language detection sdk"," language detector code"," language detection code"," language detector script"," language detection script"," language detector program"," language detection program"," language detector application"," language detection application"," language detector app"," language detection app"," language detector utility"," language detection utility"," language detector helper"," language detection helper"," language detector helper tool"," language detection helper tool"," language detector helper software"," language detection helper software"," language detector helper service"," language detection helper service"," language detector helper library"," language detection helper library"," language detector helper sdk"," language detection helper sdk"," language detector helper code"," language detection helper code"," language detector helper script"," language detection helper script"," language detector helper program"," language detection helper program"," language detector helper application"," language detection helper application"," language detector helper app"," language detection helper app"," language detector helper tool"," language detection helper tool"," language detector helper utility"," language detection helper utility"," language detector helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/languagedetector-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/languagedetector-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
