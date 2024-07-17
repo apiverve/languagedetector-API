@@ -48,8 +48,7 @@ Using the API client, you can perform requests to the API.
 
 ```
 var query = {
-  "text": "esta es una frase en español. esta API puede detectar fácilmente el idioma",
-  "limit": "5"
+  "text": "esta es una frase en español. esta API puede detectar fácilmente el idioma"
 };
 ```
 
