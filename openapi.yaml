@@ -1,0 +1,85 @@
+openapi: 3.0.4
+info:
+  title: Language Detector
+  description: Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/languagedetector:
+    post:
+      summary: Detect Language
+      description: Language Detector is a simple tool for detecting the language of a text. It returns the language code and the confidence level.
+      operationId: languagedetector
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+                  code:
+                    type: number
+                    description: code
+              example:
+                status: ok
+                error: 
+                data:
+                - language: spanish
+                  confidence: 0.384717948717949
+                  code: es
+                - language: portuguese
+                  confidence: 0.294615384615385
+                  code: pt
+                - language: danish
+                  confidence: 0.246461538461538
+                  code: da
+                code: 200
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: The text to detect the language of
+                  example: esta es una frase en español. esta API puede detectar fácilmente el idioma
+              required:
+              - text
+              example:
+                text: esta es una frase en español. esta API puede detectar fácilmente el idioma
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
